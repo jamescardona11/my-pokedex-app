@@ -29,20 +29,21 @@ class MainActivity : ComponentActivity() {
             MyPokedexAppTheme {
                 val navController = rememberNavController()
                 NavHost(navController = navController, startDestination = "pokemon_list_screen") {
-                    composable("pokemon_list_screen"){
+                    composable("pokemon_list_screen") {
                         PokemonListScreen(navController = navController)
 
                     }
-                    composable("pokemon_detail_screen/{dominantColor}/{pokemonName}",
+                    composable(
+                        "pokemon_detail_screen/{dominantColor}/{pokemonName}",
                         arguments = listOf(
-                            navArgument("dominantColor"){
+                            navArgument("dominantColor") {
                                 type = NavType.IntType
                             },
-                            navArgument("pokemonName"){
+                            navArgument("pokemonName") {
                                 type = NavType.StringType
                             },
                         )
-                    ){
+                    ) {
                         val dominantColor = remember {
                             val color = it.arguments?.getInt("dominantColor")
                             color?.let { Color(it) } ?: Color.White
@@ -53,16 +54,7 @@ class MainActivity : ComponentActivity() {
                         }
 
 
-
                     }
-                }
-
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting("Android")
                 }
             }
         }
