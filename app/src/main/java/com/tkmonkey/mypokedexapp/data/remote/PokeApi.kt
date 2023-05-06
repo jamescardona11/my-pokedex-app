@@ -1,5 +1,6 @@
 package com.tkmonkey.mypokedexapp.data.remote
 
+
 import com.tkmonkey.mypokedexapp.data.remote.responses.Pokemon
 import com.tkmonkey.mypokedexapp.data.remote.responses.PokemonList
 import retrofit2.http.GET
