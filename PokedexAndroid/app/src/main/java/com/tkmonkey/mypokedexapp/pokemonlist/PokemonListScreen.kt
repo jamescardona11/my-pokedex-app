@@ -1,7 +1,6 @@
 package com.tkmonkey.mypokedexapp.pokemonlist
 
 
-import androidx.compose.animation.fadeIn
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -35,7 +34,6 @@ import com.tkmonkey.mypokedexapp.R
 import com.tkmonkey.mypokedexapp.data.models.PokemonListEntry
 import com.tkmonkey.mypokedexapp.ui.theme.RobotoCondensed
 import androidx.hilt.navigation.compose.hiltViewModel
-import coil.compose.AsyncImage
 import coil.compose.SubcomposeAsyncImage
 
 
